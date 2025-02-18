@@ -4,7 +4,7 @@
 
 ## Вариант решения задания №1
 ```sql
-SELECT c.login, COUNT(o.courierId) AS order_count
+SELECT c.login, COUNT(o."courierId") AS order_count
 FROM "Couriers" c
 JOIN "Orders" o ON c.id = o."courierId"
 WHERE o."inDelivery" = true AND o.cancelled = false AND o.finished = false
